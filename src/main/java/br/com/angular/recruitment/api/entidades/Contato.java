@@ -44,7 +44,7 @@ public class Contato implements Serializable{
 	@Column(name="contato_telefone")
 	private String telefone;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade={CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
 	@JoinColumn(name="contato_operadora_id")
 	private Operadora operadora;
 	

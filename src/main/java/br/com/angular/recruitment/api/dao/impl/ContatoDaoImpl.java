@@ -66,4 +66,15 @@ public class ContatoDaoImpl implements ContatoDao,Serializable{
 		}
 	}
 
+	@Override
+	public void deletarContato(Contato c) throws PersistenciaException {
+		try{
+			entityManager.remove(c);
+		}catch (Exception e) {
+			logger.log(Level.SEVERE, e.getMessage(), e);
+			throw new PersistenciaException("Erro ao listar os contatos");
+			
+		}
+	}
+
 }

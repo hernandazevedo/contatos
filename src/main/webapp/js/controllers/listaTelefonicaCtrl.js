@@ -1,4 +1,4 @@
-angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, contatos, operadoras, serialGenerator) {
+angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, contatos, operadoras, serialGenerator,contatosAPI,$location,$route) {
 	$scope.app = "Lista Telefonica";
 	$scope.contatos = contatos.data;
 	$scope.operadoras = operadoras.data;
@@ -18,9 +18,21 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
 		});
 	};
 	$scope.apagarContatos = function (contatos) {
-		$scope.contatos = contatos.filter(function (contato) {
-			if (!contato.selecionado) return contato;
+		
+		var contatosSelecionados = contatos.filter(function (contato) {
+			if (contato.selecionado) return contato;
 		});
+		
+		contatosSelecionados.forEach(function (item) {
+			contatosAPI.deletarContato(item.id).error(function (data) {
+				console.log("erro ao deletar contato");
+				console.log(item);
+			});
+			 
+		});
+		
+		$location.path("/contatos");
+		$route.reload();
 	};
 	$scope.isContatoSelecionado = function (contatos) {
 		return contatos.some(function (contato) {

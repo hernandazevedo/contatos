@@ -9,4 +9,5 @@ public interface ContatoDao {
 	void salvar(Contato contato) throws PersistenciaException;
 	List<Contato> listarTodos() throws PersistenciaException;
 	Contato getContato(Long id) throws PersistenciaException;
+	void deletarContato(Contato c)throws PersistenciaException;
 }

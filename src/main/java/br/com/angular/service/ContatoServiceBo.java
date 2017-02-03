@@ -13,6 +13,7 @@ public interface ContatoServiceBo{
 	List<ContatoBean> listarTodos() throws NegocioException;
 	
 	ContatoBean getContato(Long id) throws NegocioException;
+	void deletarContato(Long id) throws NegocioException;
 	
 
 }

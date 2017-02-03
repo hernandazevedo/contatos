@@ -1,4 +1,4 @@
 angular.module("listaTelefonica").value("config", {
-	baseUrlRest: "http://localhost:8080/api/v1",
-	baseUrl: "http://localhost:8080/api/"
+	baseUrlRest: "http://hernand.servehttp.com:8080/api/v1",
+	baseUrl: "http://hernand.servehttp.com:8080/api/"
 });

@@ -116,5 +116,37 @@ public class ContatoServiceBoImpl implements ContatoServiceBo {
 		
 		return contatoBean;
 	}
+	
+	
+
+	@Override
+	@Transactional
+	public void deletarContato(Long id) throws NegocioException{
+
+
+		logger.log(Level.INFO, "deletar contatos ");
+		try{
+			Contato c = contatoDao.getContato(id);
+			if(c != null){
+				contatoDao.deletarContato(c);
+			}else{
+
+				throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR,"Contato nao encontrado");
+			}
+		}
+		catch (PersistenciaException e) {
+			String message = "Erro ao gravar o contato no banco";
+			logger.log(Level.SEVERE, "Erro ao gravar o contato no banco ",e);
+			throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR,message);			
+		}
+		catch (NegocioException e) {
+			throw e;
+		}
+		catch (Exception e) {
+			logger.log(Level.SEVERE, "Erro nao esperado ao salvar contato ",e);
+			throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR);
+		}
+		
+	}
 
 }
