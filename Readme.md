@@ -2,18 +2,13 @@ Este projeto é uma prova de conceito usando angularjs e java
 
 Autor: hernand.azevedo@gmail.com
 24/01/2017
+ 
 
----------------- Ferramentas utilizadas - ------------------
 HSQLDB: download em http://hsqldb.org/
 Maven: https://maven.apache.org/download.cgi
-Git: https://git-scm.com/downloads
-Plugin do Chrome Advanced REST client oferecido por chromerestclient.com
-
 
 Dependencias principais do maven
 Spring 3  - Injecao de dependencia e Gerenciamento transacional
-Junit - Testes
-Mockito - Mock dos testes
 JPA - Gravar no Banco de Dados
 Jersey - Framework para webservices restful
 
