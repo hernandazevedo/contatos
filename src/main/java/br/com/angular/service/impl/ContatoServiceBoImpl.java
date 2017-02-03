@@ -46,7 +46,7 @@ public class ContatoServiceBoImpl implements ContatoServiceBo {
 			throw e;
 		}
 		catch (Exception e) {
-			logger.log(Level.SEVERE, "Erro não esperado ao salvar contato ",e);
+			logger.log(Level.SEVERE, "Erro nao esperado ao salvar contato ",e);
 			throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR);
 		}
 
@@ -110,7 +110,7 @@ public class ContatoServiceBoImpl implements ContatoServiceBo {
 			throw e;
 		}
 		catch (Exception e) {
-			logger.log(Level.SEVERE, "Erro não esperado ao salvar contato ",e);
+			logger.log(Level.SEVERE, "Erro nao esperado ao salvar contato ",e);
 			throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR);
 		}
 		
