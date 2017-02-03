@@ -41,8 +41,8 @@ public class OperadoraServiceBoImpl implements OperadoraServiceBo{
 		
 		/**
 		 * 
-		 * Para futura, a lÛgica de envio do SMS real para a operadora est· fora do escopo deste projeto.
-		 * Escrever aqui o cÛdigo que envia o sms.
+		 * Para futura, a l√≥gica de envio do SMS real para a operadora est√° fora do escopo deste projeto.
+		 * Escrever aqui o c√≥digo que envia o sms.
 		 */
 	}
 	
@@ -73,7 +73,7 @@ public class OperadoraServiceBoImpl implements OperadoraServiceBo{
 			throw e;
 		}
 		catch (Exception e) {
-			logger.log(Level.SEVERE, "Erro n„o esperado ao listar operadoras ",e);
+			logger.log(Level.SEVERE, "Erro n√£o esperado ao listar operadoras ",e);
 			throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR);
 		}
 		

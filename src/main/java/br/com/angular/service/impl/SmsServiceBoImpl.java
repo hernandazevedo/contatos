@@ -22,7 +22,7 @@ import br.com.angular.service.SmsServiceBoHelper;
 
 
 /**
- * Esta È classe de negocio responsavel por tratar o envio de sms. 
+ * Esta √© classe de negocio responsavel por tratar o envio de sms. 
  * @author Hernand Azevedo
  *
  */
@@ -81,7 +81,7 @@ public class SmsServiceBoImpl implements SmsServiceBo {
 			throw e;
 		}
 		catch (Exception e) {
-			logger.log(Level.SEVERE, "Erro n„o esperado ao enviar sms ",e);
+			logger.log(Level.SEVERE, "Erro n√£o esperado ao enviar sms ",e);
 			throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR);
 		}
 
@@ -117,7 +117,7 @@ public class SmsServiceBoImpl implements SmsServiceBo {
 			throw e;
 		}
 		catch (Exception e) {
-			logger.log(Level.SEVERE, "Erro n„o esperado ao enviar sms ",e);
+			logger.log(Level.SEVERE, "Erro n√£o esperado ao enviar sms ",e);
 			throw new NegocioException(ResponsesEnum.INTERNAL_SERVER_ERROR);
 		}
 

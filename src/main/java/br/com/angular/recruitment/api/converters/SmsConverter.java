@@ -3,7 +3,7 @@ package br.com.angular.recruitment.api.converters;
 import br.com.angular.recruitment.api.entidades.Sms;
 
 /**
- * LÛgica de transformaÁ„o do Bean usado no webservice para a entidade que ser· gravada no banco de dados.
+ * L√≥gica de transforma√ß√£o do Bean usado no webservice para a entidade que ser√° gravada no banco de dados.
  * @author Hernand Azevedo
  *
  */

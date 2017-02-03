@@ -32,7 +32,7 @@ public class SmsServiceBoHelperImplTest {
 	@Test(expected=NegocioException.class)
 	public void validarBodyInvalido(){
 		StringBuilder sbTamanhoInvalido = new StringBuilder();
-		sbTamanhoInvalido.append("… um fato conhecido de todos que um leitor se distrair· com o conte˙do de texto legÌvel de uma p·gina quando estiver examinando sua diagramaÁ„o. A vantagem de usar Lorem Ipsum È");
+		sbTamanhoInvalido.append("√â um fato conhecido de todos que um leitor se distrair√° com o conte√∫do de texto leg√≠vel de uma p√°gina quando estiver examinando sua diagrama√ß√£o. A vantagem de usar Lorem Ipsum √©");
 		
 		Sms sms = new Sms(1,"5521973448438","5521975405717",sbTamanhoInvalido.toString(),"24/05/2017");
 		service.validar(sms);

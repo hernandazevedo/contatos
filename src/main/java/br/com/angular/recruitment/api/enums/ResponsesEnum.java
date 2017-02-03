@@ -1,7 +1,7 @@
 package br.com.angular.recruitment.api.enums;
 
 /**
- * Codigos e descrição das respostas.
+ * Codigos e descriÃ§Ã£o das respostas.
  * @author Hernand Azevedo
  *
  */

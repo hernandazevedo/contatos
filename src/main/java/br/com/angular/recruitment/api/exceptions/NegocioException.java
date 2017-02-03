@@ -3,7 +3,7 @@ package br.com.angular.recruitment.api.exceptions;
 import br.com.angular.recruitment.api.enums.ResponsesEnum;
 
 /**
- * Exception usada na camada de negócio.
+ * Exception usada na camada de negÃ³cio.
  * @author Hernand Azevedo
  *
  */

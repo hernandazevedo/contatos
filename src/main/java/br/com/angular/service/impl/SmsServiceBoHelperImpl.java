@@ -92,7 +92,7 @@ public class SmsServiceBoHelperImpl implements SmsServiceBoHelper {
 	}
 
 	/**
-	 * Metodo que avalia se o usuario é valido. 
+	 * Metodo que avalia se o usuario Ã© valido. 
 	 * @param sms
 	 */
 	@Override
