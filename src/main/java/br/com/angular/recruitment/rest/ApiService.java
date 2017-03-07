@@ -50,7 +50,7 @@ public class ApiService {
 		try{
 		
 			smsServiceBo.enviar(sms);
-			return Response.status(ResponsesEnum.OK.getCode()).header("description", ResponsesEnum.OK.getDescription()).build();
+			return Response.status(ResponsesEnum.HTTP_CREATED.getCode()).header("description", ResponsesEnum.HTTP_CREATED.getDescription()).build();
 		}catch(NegocioException e){
 			logger.log(Level.SEVERE, e.getMessage(), e);
 			return Response.status(e.getResponse().getCode()).header("description", e.getMessage()).build();			
@@ -77,7 +77,7 @@ public class ApiService {
 		
 			List<Sms> lista = smsServiceBo.listarTodos();
 
-			return Response.status(ResponsesEnum.OK.getCode()).header("description", ResponsesEnum.OK.getDescription()).entity(lista).build();
+			return Response.status(ResponsesEnum.HTTP_CREATED.getCode()).header("description", ResponsesEnum.HTTP_CREATED.getDescription()).entity(lista).build();
 		}catch(NegocioException e){
 			logger.log(Level.SEVERE, e.getMessage(), e);
 			return Response.status(e.getResponse().getCode()).header("description", e.getMessage()).build();			
