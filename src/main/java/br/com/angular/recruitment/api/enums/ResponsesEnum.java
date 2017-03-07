@@ -8,7 +8,8 @@ package br.com.angular.recruitment.api.enums;
 public enum ResponsesEnum {
 
 	
-	OK(201,"Sms sent"),
+	HTTP_CREATED(201,"Sms sent"),
+	HTTP_OK(200,"RESPONSE OK"),
 	INTERNAL_SERVER_ERROR(500,"Internal Server Error"),
 	VALIDATION_EXCEPTION(405,"Validation exception"),
 	MOBILE_USER_NOT_FOUND(404,"Mobile User not found");

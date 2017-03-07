@@ -45,7 +45,7 @@ public class ApiServiceTest {
 		Sms sms = new Sms(1,"5521973448438","5521975405717","Ola tudo bem?",null);
 		
 		Response response = service.sendSMS(sms);
-		assertEquals(ResponsesEnum.OK.getCode(), response.getStatus());
+		assertEquals(ResponsesEnum.HTTP_CREATED.getCode(), response.getStatus());
 	}
 	
 	@Test

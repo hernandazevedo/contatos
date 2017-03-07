@@ -41,7 +41,7 @@ public class OperadoraAPIService {
 		try{
 		
 			List<OperadoraBean> lista = operadoraServiceBo.listarTodos();
-			return Response.status(ResponsesEnum.OK.getCode()).entity(lista).build();
+			return Response.status(ResponsesEnum.HTTP_OK.getCode()).entity(lista).build();
 		}catch(NegocioException e){
 			logger.log(Level.SEVERE, e.getMessage(), e);
 			return Response.status(e.getResponse().getCode()).header("description", e.getMessage()).build();			

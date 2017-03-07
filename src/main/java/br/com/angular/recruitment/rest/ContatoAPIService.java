@@ -44,7 +44,7 @@ public class ContatoAPIService {
 		try{
 		
 			contatoServiceBo.salvar(contato);
-			return Response.status(ResponsesEnum.OK.getCode()).build();
+			return Response.status(ResponsesEnum.HTTP_CREATED.getCode()).build();
 		}catch(NegocioException e){
 			logger.log(Level.SEVERE, e.getMessage(), e);
 			return Response.status(e.getResponse().getCode()).header("description", e.getMessage()).build();			
@@ -69,7 +69,7 @@ public class ContatoAPIService {
 		try{
 		
 			List<ContatoBean> lista = contatoServiceBo.listarTodos();
-			return Response.status(ResponsesEnum.OK.getCode()).entity(lista).build();
+			return Response.status(ResponsesEnum.HTTP_OK.getCode()).entity(lista).build();
 		}catch(NegocioException e){
 			logger.log(Level.SEVERE, e.getMessage(), e);
 			return Response.status(e.getResponse().getCode()).header("description", e.getMessage()).build();			
@@ -95,7 +95,7 @@ public class ContatoAPIService {
 		try{
 		
 			ContatoBean contato = contatoServiceBo.getContato(id);
-			return Response.status(ResponsesEnum.OK.getCode()).entity(contato).build();
+			return Response.status(ResponsesEnum.HTTP_OK.getCode()).entity(contato).build();
 		}catch(NegocioException e){
 			logger.log(Level.SEVERE, e.getMessage(), e);
 			return Response.status(e.getResponse().getCode()).header("description", e.getMessage()).build();			
@@ -121,7 +121,7 @@ public class ContatoAPIService {
 		try{
 		
 			contatoServiceBo.deletarContato(id);
-			return Response.status(ResponsesEnum.OK.getCode()).build();
+			return Response.status(ResponsesEnum.HTTP_OK.getCode()).build();
 		}catch(NegocioException e){
 			logger.log(Level.SEVERE, e.getMessage(), e);
 			return Response.status(e.getResponse().getCode()).header("description", e.getMessage()).build();			
